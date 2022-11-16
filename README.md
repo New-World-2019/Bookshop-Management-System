@@ -42,8 +42,9 @@ purchases
 	char received		// Check(T or C or F) def (F)
 	int inv
 	
+
 ```cpp
-create table purchases(ord_id INT(11) primary key not null auto_increment,book_id INT(11),sup_id INT(11),qty INT(11),dt_ordered DATE,eta INT(11),received CHAR(1) default('F'),inv INT(11),FOREIGN KEY(book_id) REFERENCES books(id));
+create table purchases(ord_id INT(11) primary key not null auto_increment,book_id INT(11),sup_id INT(11),qty INT(11),dt_ordered DATE,eta INT(11),received CHAR(1) default('F'),inv INT(11),FOREIGN KEY(book_id) REFERENCES books(id),FOREIGN KEY(sup_id) REFERENCES suppliers(id));
 ```
 
 employees
